@@ -49,6 +49,12 @@ header {
 	margin: 0;
 	letter-spacing: 4px;
 }
+.hero_header_2 {
+	color: #FFFFFF;
+	text-align: center;
+	margin-bottom: -20px;
+	letter-spacing: 4px;
+}
 /* About Section */
 .text_column {
 	width: 90%;
@@ -223,6 +229,12 @@ footer {
 	margin-top: 0px;
 }
 .hero_header {
+	padding-left: 10px;
+	padding-right: 10px;
+	line-height: 22px;
+	text-align: center;
+}
+.hero_header_2 {
 	padding-left: 10px;
 	padding-right: 10px;
 	line-height: 22px;
