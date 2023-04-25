@@ -31,6 +31,18 @@ header {
 	line-height: 2em;
 	font-size: 22px;
 }
+.container_head {
+	color: #fff;
+	font-weight: bold;
+	margin-left: auto;
+	letter-spacing: 4px;
+	margin-right: auto;
+	text-align: center;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	line-height: 2em;
+	font-size: 22px;
+}
 .hero_header {
 	color: #FFFFFF;
 	text-align: center;
