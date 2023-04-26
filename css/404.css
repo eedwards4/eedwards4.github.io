@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* source: https://codepen.io/igloude/pen/qNNWKr */
 body {
+	font-family: "Lucida Console", "monospace";
 	background-color: #0414a7;
 	margin: 0;
 }
@@ -9,15 +10,38 @@ body {
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #FFFFFF;
+	background-color: #0414a7;
+}
+/* BLUESCREEN */
+.bg{
+	background: #0414a7;
+	display: flex;
+	justify-content: center;
 }
 
-.bluescreen {
-	padding-top: 10%;
-	
-}
-
-.bluescreen .text_rev{
-	text-align: center;
+.title{
+	margin-bottom: 50px;
+	background-color: #aaaaaa;
 	color: #0414a7;
+	padding: 5px 15px 2px 13px;
+}
+
+.text{
+	color: #aaaaaa;
+	background-color: #0414a7;
+	text-align: left;
+}
+
+.text_button_line{
+	color: #aaaaaa;
+	background-color: #0414a7;
+	text-align: left;
+	margin-bottom: -15px;
+}
+
+.text_button{
+	color: #aaaaaa;
+	background-color: #0414a7;
+	text-align: left;
+	margin-bottom: -15px;
 }
