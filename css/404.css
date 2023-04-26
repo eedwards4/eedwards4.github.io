@@ -40,8 +40,16 @@ body {
 }
 
 .text_button{
+	font-family: "Lucida Console", "monospace";
+	font-size: 15px;
 	color: #aaaaaa;
 	background-color: #0414a7;
 	text-align: left;
 	margin-bottom: -15px;
+	border: 0;
+}
+
+.text_button:hover{
+	background-color: #aaaaaa;
+	color: #0414a7;
 }
