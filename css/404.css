@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* source: https://codepen.io/igloude/pen/qNNWKr */
+body {
+	background-color: #0414a7;
+	margin: 0;
+}
+
+.container{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFFFFF;
+}
+
+.bluescreen {
+	padding-top: 10%;
+	
+}
+
+.bluescreen .text_rev{
+	text-align: center;
+	color: #0414a7;
+}
