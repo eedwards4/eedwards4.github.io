@@ -40,6 +40,18 @@ body{
 	height: 50px;
 	margin-bottom: 0px;
 }
+.header-buttons-container{
+	align-content: right;
+	display: inline-block;
+}
+.header-button{
+	position: relative;
+	border: none;
+	background: transparent;
+	bottom: 19px;
+	margin-bottom: 0px;
+	color: #D5D0D3;
+}
 /*Body*/
 .sep-line{
 	background-color: #7A8286;
@@ -48,18 +60,25 @@ body{
 }
 .body-container{
 	align-content: left;
-	grid-gap: 0px;
+	height: 82vh;
 }
 .body-left{
 	display: inline-block;
 	width: 50%;
-	height: 83vh;
+	height: 82vh;
 	float: left;
 }
 .body-right{
 	display: inline-block;
 	width: 50%;
-	height: 83vh;
+	height: 82vh;
 	float: left;
 	background-color: #202B2A;
+}
+/*Footer*/
+.footer{
+	width: 100vw;
+	text-align: center;
+	font-size: 10px;
+	color: #576365;
 }
