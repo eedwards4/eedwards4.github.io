@@ -1,71 +1,65 @@
 @charset "UTF-8";
 /* 
 Colors
-Background: #282828
-Lift_1: #363636
-Lift_2: 
-Lift_3:
+Background: #021416
+Lift: #202B2A
+Sep_lines: #7A8286
 Text: 
 Button_unpressed:
 Button_pressed:
-Styles:
-Offset: 6px
-Spread: 16px
-Inner spread: 8px
-Opacity: 0.1
 */
-/*Body*/
+/*Background*/
 body{
-	background-color: #282828;
+	background-color: #021416;
 	margin: 0;
 }
-
-/*General*/
-.margin_32{
-	margin: 32px;
+/*Header*/
+.header{
+	width: 100vw;
+	background-color: #021416;
+	margin: 0;
 }
-.button{
+.logo-button{
+	/*This is literally just a button container lol*/
 	border: none;
-	background-color: #363636;
+	background: transparent;
+	margin-top: 5px;
+	margin-bottom: 0px;
 }
-.button:hover{
-	color: cadetblue;
-}
-/*Main container*/
-.main_box{
-	/*Make this div the size of the page*/
-	width: 90vw;
-	height: 90vh;
-	margin-right: 5vw;
-	margin-left: 5vw;
-	margin-top: 5vh;
-	margin-bottom: 5vh;
-	/*Colors and stuff*/
-	background-color: #363636;
-	/*Neumorphism*/
-	border-radius: 30px;
-	background: #363636;
-	box-shadow: 3.9px 3.9px 1px #2C2C2C, -3.9px -3.9px 1px #404040;
-}
-.main_box_internal{
-	padding: 25px;
-}
-/*Text formatting stuff (cringe)*/
-.title{
-	font-family: "Proxima Soft Light";
-	margin-top: -5px;
-	margin-bottom: -10px;
-	font-size: 60px;
-	color: #000000;
-}
-.header{ /* THIS IS A BUTTON BECAUSE I'M DUMB */
-	font-family: "Proxima Soft Medium";
+.logo-text{
+	font-family: "Proxima Soft";
 	font-size: 25px;
+	display: inline-block;
+	color: #D5D0D3;
+	position: relative;
+	bottom: 15px;
+	margin-bottom: 0px;
 }
-.body{
-	font-family: "Proxima Soft Condensed";
+.logo{
+	width: 50px;
+	height: 50px;
+	margin-bottom: 0px;
 }
-.link{
-	font-family: "Proxima Soft Black";
-	color: cadetblue;
+/*Body*/
+.sep-line{
+	background-color: #7A8286;
+	height: 4px;
+	width: 100vw;
+}
+.body-container{
+	align-content: left;
+	grid-gap: 0px;
+}
+.body-left{
+	display: inline-block;
+	width: 50%;
+	height: 83vh;
+	float: left;
+}
+.body-right{
+	display: inline-block;
+	width: 50%;
+	height: 83vh;
+	float: left;
+	background-color: #202B2A;
 }
