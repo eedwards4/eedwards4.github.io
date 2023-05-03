@@ -24,6 +24,13 @@ body{
 .margin_32{
 	margin: 32px;
 }
+.button{
+	border: none;
+	background-color: #363636;
+}
+.button:hover{
+	color: cadetblue;
+}
 /*Main container*/
 .main_box{
 	/*Make this div the size of the page*/
@@ -39,7 +46,6 @@ body{
 	border-radius: 30px;
 	box-shadow: calc(0px - 6px) calc(0px - 6px) 16px 0 rgba(0,0,0,0.1), 6px 6px 16px 0 rgba(0,0,0,0.1), inset calc(0px - 6px) calc(0px - 6px) 8px 0 rgba(0,0,0,0.1), inset 6px 6px 8px 0 rgba(255,255,255,0.1);
 }
-
 .main_box_internal{
 	padding: 25px;
 }
@@ -47,17 +53,13 @@ body{
 .title{
 	font-family: "Proxima Soft Light";
 	margin-top: -5px;
+	margin-bottom: 10px;
 	font-size: 60px;
 	color: #000000;
 }
 .header{ /* THIS IS A BUTTON BECAUSE I'M DUMB */
 	font-family: "Proxima Soft Medium";
-	border: none;
-	background-color: #363636;
-	font-size: 30px;
-}
-.header:hover{
-	color: cadetblue;
+	font-size: 25px;
 }
 .body{
 	font-family: "Proxima Soft Condensed";
