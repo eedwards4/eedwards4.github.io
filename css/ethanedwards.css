@@ -44,7 +44,8 @@ body{
 	background-color: #363636;
 	/*Neumorphism*/
 	border-radius: 30px;
-	box-shadow: calc(0px - 6px) calc(0px - 6px) 16px 0 rgba(0,0,0,0.1), 6px 6px 16px 0 rgba(0,0,0,0.1), inset calc(0px - 6px) calc(0px - 6px) 8px 0 rgba(0,0,0,0.1), inset 6px 6px 8px 0 rgba(255,255,255,0.1);
+	background: #363636;
+	box-shadow: 3.9px 3.9px 1px #2C2C2C, -3.9px -3.9px 1px #404040;
 }
 .main_box_internal{
 	padding: 25px;
