@@ -58,6 +58,8 @@ body{
 	top: 25px;
 	right: 5px;
 	color: #D5D0D3;
+	border-bottom-left-radius: 5px;
+	border-top-right-radius: 5px;
 }
 .header-button:hover{
 	background-color: #D5D0D3;
@@ -72,29 +74,28 @@ body{
 }
 .body-container{
 	align-content: left;
-	height: 100%;
 	padding-bottom: 10px;
+	width: calc(100% - 50px);
+	height: calc(100vh - 120px);
+	margin-left: 25px;
 }
 .body-left{
 	display: inline-block;
-	width: calc(50% - 25px);
-	height: 100px;
+	width: 50%;
+	height: 100%;
 	float: left;
-	margin-left: 25px;
 }
 .body-right{
 	display: inline-block;
-	width: calc(50% - 25px);
-	height: 100px;
+	width: 50%;
+	height: 100%;
 	float: left;
-	margin-right: 25px;
 	background-color: #202B2A;
 }
 /*Footer*/
 .footer{
 	width: 100vw;
 	text-align: center;
-	padding-top: 95px;
 	font-size: 10px;
 	color: #576365;
 }
