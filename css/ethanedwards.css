@@ -109,6 +109,20 @@ body{
 	margin-left: 10px;
 	color: #D5D0D3;
 }
+.construction{
+	width: 350px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25vh;
+	-webkit-animation:spin 15s linear infinite;
+}
+@keyframes spin{
+	100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    }
+}
 /*Footer*/
 .footer{
 	width: 100vw;
