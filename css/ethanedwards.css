@@ -28,6 +28,7 @@ body{
 	background: transparent;
 	margin-top: 5px;
 	margin-bottom: 0px;
+	z-index: 100;
 }
 .logo-text{
 	font-family: "Proxima Soft";
@@ -61,6 +62,7 @@ body{
 	color: #D5D0D3;
 	border-bottom-left-radius: 5px;
 	border-top-right-radius: 5px;
+	z-index: 100;
 }
 .header-button:hover{
 	background-color: #D5D0D3;

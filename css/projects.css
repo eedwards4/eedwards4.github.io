@@ -29,6 +29,7 @@ body{
 	background: transparent;
 	margin-top: 5px;
 	margin-bottom: 0px;
+	z-index: 100;
 }
 .logo-text{
 	font-family: "Proxima Soft";
