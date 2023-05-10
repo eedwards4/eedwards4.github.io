@@ -2,12 +2,12 @@
 let resizeReset = function() {
 	w = canvasBody.width = window.innerWidth;
 	h = canvasBody.height = window.innerHeight;
+	particleAmount = 5*(window.innerWidth)/100;
 }
 
 const opts = { 
 	particleColor: "rgb(200,200,200)",
 	lineColor: "rgb(200,200,200)",
-	particleAmount: 30,
 	defaultSpeed: 1,
 	variantSpeed: 1,
 	defaultRadius: 2,
@@ -17,6 +17,8 @@ const opts = {
 
 window.addEventListener("resize", function(){
 	deBouncer();
+	resizeReset();
+	setup();
 });
 
 let deBouncer = function() {
@@ -86,7 +88,7 @@ Particle = function(xPos, yPos){
 function setup(){ 
 	particles = [];
 	resizeReset();
-	for (let i = 0; i < opts.particleAmount; i++){
+	for (let i = 0; i < particleAmount; i++){
 		particles.push( new Particle() );
 	}
 	window.requestAnimationFrame(loop);
