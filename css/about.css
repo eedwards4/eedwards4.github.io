@@ -1,0 +1,100 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+Colors
+Background: #021416
+Lift: #202B2A
+Sep_lines: #7A8286
+Text:
+Button_unpressed:
+Button_pressed:
+*/
+/*Background*/
+body{
+    background-color: #021416;
+    margin: 0;
+    overflow: hidden;
+}
+/*Header*/
+.header{
+    width: calc(100% - 50px);
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #021416;
+    margin: 0;
+}
+.logo-button{
+    /*This is literally just a button container lol*/
+    border: none;
+    background: transparent;
+    margin-top: 5px;
+    margin-bottom: 0;
+    z-index: 100;
+}
+.logo-text{
+    font-family: "Proxima Soft", serif;
+    font-size: 25px;
+    display: inline-block;
+    color: #D5D0D3;
+    position: relative;
+    bottom: 15px;
+    margin-bottom: 0;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0;
+}
+/*Right side buttons*/
+.header-buttons-container{
+    height: 50px;
+    width: 50%;
+    margin-bottom: 0;
+    float: right;
+}
+.header-button{
+    position: relative;
+    float: right;
+    border: none;
+    background: transparent;
+    margin-bottom: 0;
+    top: 25px;
+    right: 5px;
+    color: #D5D0D3;
+}
+.header-button:hover{
+    background-color: #D5D0D3;
+    color: #021416;
+}
+.header-button-curr{
+    background-color: #D5D0D3;
+    color: #021416;
+}
+.header-button-spacer{
+    position: relative;
+    float: right;
+    height: 1px;
+    width: 20px;
+}
+/*Body*/
+.sep-line{
+    background-color: #7A8286;
+    height: 4px;
+    width: calc(100% - 50px);
+    margin-left: 25px;
+}
+.body-container{
+    padding-bottom: 10px;
+    width: calc(100% - 50px);
+    height: calc(100vh - 120px);
+    margin-left: 25px;
+}
+/*Footer*/
+.footer{
+    margin-top: 8px;
+    width: 100vw;
+    text-align: center;
+    font-size: 10px;
+    color: #576365;
+}
