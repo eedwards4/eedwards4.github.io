@@ -18,7 +18,7 @@ const opts = {
 window.addEventListener("resize", function(){
 	deBouncer();
 	resizeReset();
-	setup();
+	clear();
 });
 
 let deBouncer = function() {
@@ -92,6 +92,14 @@ function setup(){
 		particles.push( new Particle() );
 	}
 	window.requestAnimationFrame(loop);
+}
+
+function clear(){
+	particles = [];
+	resizeReset();
+	for (let i = 0; i < particleAmount; i++){
+		particles.push( new Particle() );
+	}
 }
 
 function loop(){ 
