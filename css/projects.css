@@ -144,26 +144,44 @@ body{
 	overflow: hidden;
 }
 .project-image{
-	width: 50%;
-	margin-left: 25%;
+	width: 75%;
+	margin-left: calc(25%/2);
+	opacity: 95%;
 }
 /*Project links*/
 .project-link-box{
 	width: 100%;
 	height: 50px;
-	display: block;
+	display: flex;
+	justify-content: center;
 }
-.project-link-button-internal{
-
+.imgLink{
+	width: 32px;
+	height: 32px;
+	margin-left: 15px;
+	margin-top: 16px;
+	display: inline-flex;
+	border: none;
+	background: transparent;
 }
-.project-link-button-github{
-
+.linkImg{
+	width: 32px;
+	height: 32px;
+	margin-top: -1px;
+	margin-left: -5px;
+	filter: invert(65%) sepia(0%) saturate(7463%) hue-rotate(222deg) brightness(119%) contrast(115%);
 }
 /*Project description text*/
 .project-text{
 	width: 100%;
 	float: left;
 	display: inline-block;
+}
+.project-text-internal{
+	width: 75%;
+	margin-left: calc(25%/2);
+	font-family: "Proxima Soft Light", serif;
+	color: #D5D0D3;
 }
 .project-header {
 	width: 100%;
