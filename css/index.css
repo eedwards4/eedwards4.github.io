@@ -12,6 +12,7 @@ Button_pressed:
 body{
 	background-color: #021416;
 	margin: 0;
+	overflow: hidden;
 }
 /*Header*/
 .header{
@@ -85,23 +86,23 @@ body{
 	height: calc(100vh - 120px);
 	margin-left: 25px;
 }
-.body-left{
-	display: inline-block;
-	width: 50%;
-	height: 100%;
-	float: left;
-}
-.body-right{
-	display: inline-block;
-	width: 50%;
-	height: 100%;
-	float: left;
+.body{
+	width: calc(100% - 50px);
+	height: calc(100vh - 120px);
+	margin-left: 25px;
+	margin-top: 86px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
 	background-color: #202B2A;
+	opacity: 90%;
 }
 /*Text box*/
 .text-box{
 	font-family: "Proxima Soft Condensed", serif;
 	font-size: 20px;
+	text-align: center;
 	width: calc(100% - 20px);
 	height: calc(100% - 20px);
 	margin-top: 10px;
@@ -123,6 +124,7 @@ body{
 }
 /*Footer*/
 .footer{
+	margin-top: -315px;
 	width: 100vw;
 	text-align: center;
 	font-size: 10px;
