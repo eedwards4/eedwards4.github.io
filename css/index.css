@@ -99,26 +99,65 @@ body{
 	opacity: 90%;
 }
 .body-internal{
-	margin-top: calc(-10% + -350px);
-	z-index: 10;
+	width: 100%;
+	display: inline-flex;
+	justify-content: left;
+}
+.body-header{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+	font-family: 'Proxima Soft Light', serif;
+	font-size: 55px;
+	color: #D5D0D3;
+}
+/*Image slideshow*/
+.image-slideshow{
+	margin-left: 10px;
+	margin-top: 10px;
+	width: calc(50% - 10px);
+	display: flex;
+	justify-content: center;
+}
+.slideshow{
+	width: 50%;
 }
 /*Text box*/
 .text-box{
 	font-family: "Proxima Soft Condensed", serif;
 	font-size: 20px;
 	text-align: center;
-	width: calc(100% - 20px);
-	height: calc(100% - 20px);
+	width: calc(50% - 11px);
+	height: calc(100% - 75px);
 	margin-top: 10px;
-	margin-left: 10px;
+	margin-right: 10px;
 	color: #D5D0D3;
+}
+.inline-button-container{
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.contact-button{
+	font-family: "Proxima Soft Light", serif;
+	position: relative;
+	border: none;
+	background: transparent;
+	margin-bottom: 0;
+	color: #D5D0D3;
+	z-index: 100;
+	font-size: 25px;
+}
+.contact-button:hover{
+	background-color: #D5D0D3;
+	color: #021416;
 }
 .construction{
 	width: 350px;
 	display: block;
+	margin-top: -35%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 10%;
 	-webkit-animation:spin 15s linear infinite;
 }
 @keyframes spin{
