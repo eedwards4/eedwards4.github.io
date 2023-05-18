@@ -98,6 +98,10 @@ body{
 	background-color: #202B2A;
 	opacity: 90%;
 }
+.body-internal{
+	margin-top: calc(-10% + -350px);
+	z-index: 10;
+}
 /*Text box*/
 .text-box{
 	font-family: "Proxima Soft Condensed", serif;
@@ -114,7 +118,7 @@ body{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 25vh;
+	margin-top: 10%;
 	-webkit-animation:spin 15s linear infinite;
 }
 @keyframes spin{
@@ -124,8 +128,8 @@ body{
 }
 /*Footer*/
 .footer{
-	margin-top: -315px;
 	width: 100vw;
+	position: absolute;
 	text-align: center;
 	font-size: 10px;
 	color: #576365;

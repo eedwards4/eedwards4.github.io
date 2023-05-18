@@ -127,7 +127,7 @@ body{
 }
 .project-internal{
 	width: calc(100% - 20px);
-	height: calc(100% - 20px);
+	height: calc(100% - 30px);
 	margin-left: 10px;
 	margin-top: 10px;
 	font-family: "Proxima Soft Light", serif;

@@ -3,16 +3,18 @@ let resizeReset = function() {
 	w = canvasBody.width = window.innerWidth;
 	h = canvasBody.height = window.innerHeight;
 	particleAmount = 5*(window.innerWidth)/100;
+	defaultSpeed = 1/window.innerWidth;
 }
 
 const opts = { 
 	particleColor: "rgb(200,200,200)",
 	lineColor: "rgb(200,200,200)",
-	defaultSpeed: 1,
+	defaultSpeed: 1/window.innerWidth,
 	variantSpeed: 1,
 	defaultRadius: 2,
 	variantRadius: 2,
 	linkRadius: 200,
+	particleAmount: 5*(window.innerWidth)/100
 };
 
 window.addEventListener("resize", function(){
