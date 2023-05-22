@@ -148,9 +148,15 @@ button:hover > ul, button ul:hover{
 	position: absolute;
 	top: 0;
 	left: 0;
-	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 	background-color: #202B2A;
 	opacity: 90%;
+}
+.superbody::-webkit-scrollbar{
+	display: none;
 }
 .superbody-internal{
 	width: 100%;
@@ -172,6 +178,7 @@ button:hover > ul, button ul:hover{
 	width: calc(50% - 10px);
 	display: flex;
 	justify-content: center;
+	overflow: hidden;
 }
 .slideshow{
 	width: 50%;
@@ -211,19 +218,6 @@ button:hover > ul, button ul:hover{
 	display: inline;
 	font-size: 25px;
 }
-.construction{
-	width: 350px;
-	display: block;
-	margin-top: -35%;
-	margin-left: auto;
-	margin-right: auto;
-	-webkit-animation:spin 15s linear infinite;
-}
-@keyframes spin{
-	100% {
-        transform:rotate(360deg); 
-    }
-}
 /*Footer*/
 .footer{
 	width: 100vw;
@@ -249,3 +243,18 @@ button:hover > ul, button ul:hover{
 }
 /*Hacked (https://codepen.io/Hyperplexed/pen/rNrJgrd)*/
 /*SEE HACKED.JS*/
+/*Construction sign*/
+.construction{
+	visibility: hidden;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -90vh;
+	display: block;
+	-webkit-animation:spin 15s linear infinite;
+}
+@keyframes spin{
+	100% {
+		transform:rotate(360deg);
+	}
+}
