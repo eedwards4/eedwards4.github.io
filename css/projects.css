@@ -84,7 +84,7 @@ body{
 	width: calc(100% - 50px);
 	margin-left: 25px;
 }
-.body-container{
+.superbody-container{
 	padding-bottom: 10px;
 	width: calc(100% - 50px);
 	height: calc(100vh - 120px);

@@ -134,13 +134,13 @@ button:hover > ul, button ul:hover{
 	width: calc(100% - 50px);
 	margin-left: 25px;
 }
-.body-container{
+.superbody-container{
 	padding-bottom: 10px;
 	width: calc(100% - 50px);
 	height: calc(100vh - 120px);
 	margin-left: 25px;
 }
-.body{
+.superbody{
 	width: calc(100% - 50px);
 	height: calc(100vh - 120px);
 	margin-left: 25px;
@@ -152,12 +152,12 @@ button:hover > ul, button ul:hover{
 	background-color: #202B2A;
 	opacity: 90%;
 }
-.body-internal{
+.superbody-internal{
 	width: 100%;
 	display: inline-flex;
 	justify-content: left;
 }
-.body-header{
+.superbody-header{
 	margin-top: 10px;
 	margin-bottom: 10px;
 	text-align: center;
@@ -206,6 +206,11 @@ button:hover > ul, button ul:hover{
 	background-color: #D5D0D3;
 	color: #021416;
 }
+.contact-button-text{
+	margin: 0;
+	display: inline;
+	font-size: 25px;
+}
 .construction{
 	width: 350px;
 	display: block;
@@ -227,3 +232,20 @@ button:hover > ul, button ul:hover{
 	font-size: 10px;
 	color: #576365;
 }
+/*Text effects*/
+/*Gradient (https://codepen.io/egrucza/pen/pbJXra)*/
+.gradient{
+	background: linear-gradient(180deg, #FD9F1F, #ff00ba, #1FC8FF, #18ED18, #FD9F1F, #ff00ba);
+	animation: gradient-pan 15s linear infinite;
+	background-size: 100% 500%;
+	overflow: hidden;
+	margin: 0;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+@keyframes gradient-pan{
+	0%{background-position: center top;}
+	100%{background-position: center bottom;}
+}
+/*Hacked (https://codepen.io/Hyperplexed/pen/rNrJgrd)*/
+/*SEE HACKED.JS*/
