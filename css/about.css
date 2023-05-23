@@ -85,6 +85,41 @@ body{
     margin-left: 25px;
 }
 .pseudoide{
+    width: calc(100% - 50px);
+    height: calc(100vh - 120px);
+    background-color: #202B2A;
+    margin-left: 25px;
+    position: absolute;
+}
+.psuedoide-internal{
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    margin-left: 10px;
+    margin-top: 10px;
+}
+/*Styles for pseudo ide*/
+.psuedoide-function{
+
+}
+.pseudoide-function:hover{
+
+}
+.psuedoide-function-collapse{
+
+}
+.pseudoide-function-collapse:hover{
+
+}
+.pseudoide-function-title{
+    color: #D5D0D3;
+}
+.pseudoide-function-title{
+
+}
+.pseudoide-function-text{
+
+}
+.pseudoide-function-text{
 
 }
 /*Footer*/
