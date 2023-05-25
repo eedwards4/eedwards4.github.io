@@ -1,11 +1,10 @@
-@charset "utf-8";
-/* CSS Document */
-/* 
+@charset "UTF-8";
+/*
 Colors
 Background: #021416
 Lift: #202B2A
 Sep_lines: #7A8286
-Text: 
+Text:
 Button_unpressed:
 Button_pressed:
 */
@@ -62,13 +61,11 @@ body{
 	top: 25px;
 	right: 5px;
 	color: #D5D0D3;
+	z-index: 100;
 }
 .header-button:hover{
 	background-color: #D5D0D3;
-	color: #021416;
-}
-.header-button-curr{
-	background-color: #D5D0D3;
+	cursor: pointer;
 	color: #021416;
 }
 .header-button-spacer{
@@ -76,6 +73,58 @@ body{
 	float: right;
 	height: 1px;
 	width: 20px;
+}
+/*Contact button*/
+.header-contact-button{
+	position: relative;
+	float: right;
+	border: none;
+	background: transparent;
+	margin-bottom: 0;
+	top: 25px;
+	right: 5px;
+	color: #D5D0D3;
+	z-index: 100;
+}
+.header-contact-button:hover{
+	background-color: #D5D0D3;
+	cursor: pointer;
+	color: #021416;
+}
+.dropdown{
+	position: absolute;
+	display: none;
+	background: #D5D0D3;
+	left: 0;
+	padding-left: 0;
+	right: 0;
+	margin-top: 0;
+	font-family: "Proxima Soft Light", serif;
+}
+button:hover > ul, button ul:hover{
+	visibility: visible;
+	opacity: 1;
+	position: absolute;
+	display: block;
+}
+.dropdown-button{
+	list-style: none;
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	clear: both;
+	width: 100%;
+	text-align: left;
+	border-style: none;
+}
+.dropdown-button:hover{
+	padding-left: 10px;
+	border-left: 2px solid #202B2A;
+	transition: all 0.3s ease;
+}
+.dropdown-button-text{
+	color: #202B2A;
+	text-decoration: none;
 }
 /*Body*/
 .sep-line{
