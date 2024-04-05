@@ -1,20 +1,26 @@
 @charset "UTF-8";
 /*Background*/
 html{
-	background: #000814;
+	background: black;
 }
 
 body{
-	/*background-color: #1A1A1A;*/
 	margin: 0;
 }
 /*-------------------------------------------------------Colors-------------------------------------------------------*/
 /*
-background:
+background: black
 accent 1:
 accent 2:
-text 1:
-text focus:
+text 1: #9c9c9c
+text 1 hover: #CBC3C8
+text important:
+text important hover:
+*/
+/*-------------------------------------------------------Fonts--------------------------------------------------------*/
+/*
+Header:
+Name/Greeting:
 */
 /*-------------------------------------------------------Header-------------------------------------------------------*/
 .header{
@@ -23,20 +29,116 @@ text focus:
 	left: 0;
 	z-index: 1;
 	padding: 1.5rem;
+	display:flex;
+	justify-content: center;
+	/*Fonts/Colors*/
+	font-family: "input-mono-compressed", monospace;
+	color: #D5D0D3;
+	a:link{
+		color: #9c9c9c;
+		text-decoration: none;
+	}
+	a:visited{
+		color: #9c9c9c;
+		text-decoration: none;
+	}
+	a:hover{ /*TODO: ADD HOVER ANIMATIONS*/
+		color: #CBC3C8;
+	}
+	a:active{
+		color: #CBC3C8;
+	}
 }
 
 .nav{
 	width: 100%;
+	max-width: 1000px;
 	background-color: rgba(76, 76, 76, 0.36);
 	color: #B2BEB5;
-	padding: 15px 0;
+	padding: 0 0;
 	text-align: center;
 	display: flex;
 	justify-content: space-around;
-	border-radius: 5rem;
+	border-radius: 2rem;
 	backdrop-filter: blur(4px);
 }
+
+.nav_ul{
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+}
+
+.textItem{
+	padding-top: 5px;
+}
+
+.links{
+	display: inline-flex;
+	align-items: center;
+}
+
+.imgLink{
+	width: 32px;
+	display: inline-flex;
+	border: none;
+	background: transparent;
+}
+
+.linkImg{
+	width: 100%;
+	filter: invert(65%); sepia(0%) saturate(7463%) hue-rotate(222deg) brightness(150%) contrast(115%);
+}
+
+.linkImg:hover{
+	filter: invert(65%) sepia(0%) saturate(7463%) hue-rotate(222deg) brightness(119%) contrast(115%);
+}
 /*-------------------------------------------------------Body---------------------------------------------------------*/
+/*Name/Greeting*/
+.marquee_outer{
+	width: 100%;
+	padding-top: 35vh;
+	padding-bottom: 45vh;
+	display: flex;
+	justify-content: center;
+}
+
+.marquee{
+	color: #ffffff;
+	position: relative;
+	width: 30%;
+	min-width: 300px;
+	height: 2em;
+	font-size: 5em;
+	display: grid;
+	place-items: center;
+	overflow: hidden;
+}
+
+.marquee_blur{
+	position: absolute;
+	inset: 0;
+	display: grid;
+	place-items: center;
+	background-color: black;
+	background-image:
+		linear-gradient(to right, white, 1rem, transparent 50%),
+      	linear-gradient(to left, white, 1rem, transparent 50%);
+	filter: contrast(15);
+
+	p{
+		filter: blur(0.07em);
+	}
+}
+
+.marquee_clear{
+	position: absolute;
+	inset: 0;
+	display: grid;
+	place-items: center;
+}
+
 .main{
 	padding: 50px;
 	width: 100px;
@@ -48,11 +150,10 @@ text focus:
 /*SEE HACKED.JS*/
 /*Construction sign*/
 .construction{
-	visibility: hidden;
+	visibility: visible;
 	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: -90vh;
 	display: block;
 	-webkit-animation:spin 15s linear infinite;
 }
@@ -61,9 +162,21 @@ text focus:
 		transform:rotate(360deg);
 	}
 }
+/*Gooey marquee (https://codepen.io/amit_sheen/pen/wvORNYm)*/
+.marquee_text{
+	position: absolute;
+	min-width: 100%;
+	white-space: nowrap;
+	animation: marquee 16s linear infinite;
+}
+@keyframes marquee{
+	0%, 25% {translate: 100%;}
+	25%, 50% {translate: 10%;}
+	50%, 75% {pause: strong;}
+	75%, 100% {translate: -100%;}
+}
 
 /*TODO: Maybe use these:
 	   https://codepen.io/adamcurzon/pen/ExrwpMN	ABOUT ME/HIGHLIGHT
-	   https://codepen.io/amit_sheen/pen/wvORNYm	NAME/GREETING
 	   https://codepen.io/davideast/pen/MWxvzjm		BUTTONS
    */
