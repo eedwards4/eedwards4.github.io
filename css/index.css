@@ -10,7 +10,7 @@ body{
 /*-------------------------------------------------------Colors-------------------------------------------------------*/
 /*
 background: black
-accent 1:
+accent 1: #171715
 accent 2:
 text 1: #9c9c9c
 text 1 hover: #CBC3C8
@@ -53,6 +53,7 @@ Name/Greeting:
 .nav{
 	width: 100%;
 	max-width: 1000px;
+	min-width: 600px;
 	background-color: rgba(76, 76, 76, 0.36);
 	color: #B2BEB5;
 	padding: 0 0;
@@ -96,21 +97,28 @@ Name/Greeting:
 }
 /*-------------------------------------------------------Body---------------------------------------------------------*/
 /*Name/Greeting*/
+.home{
+	display: flex;
+	justify-content: center;
+}
+
 .marquee_outer{
 	width: 100%;
+	max-width: 1000px;
+	min-width: 600px;
 	padding-top: 35vh;
 	padding-bottom: 45vh;
 	display: flex;
 	justify-content: center;
+	font-size: min(80px, 8vw);
 }
 
 .marquee{
 	color: #ffffff;
 	position: relative;
-	width: 30%;
+	width: 80%;
 	min-width: 300px;
 	height: 2em;
-	font-size: 5em;
 	display: grid;
 	place-items: center;
 	overflow: hidden;
@@ -138,13 +146,31 @@ Name/Greeting:
 	display: grid;
 	place-items: center;
 }
-
-.main{
-	padding: 50px;
-	width: 100px;
-	height: 5000px; !important;
-	background-color: #001d3d;
+/*Portfolio*/
+.portfolio{
+	background-color: #171715;
 }
+
+.portHead{
+	width: 100%;
+	padding-top: 50px;
+	text-align: center;
+	font-size: min(50px, 5vw);
+	font-family: input-mono, monospace;
+	color: #9c9c9c;
+}
+
+
+/*About*/
+.about{
+	background-color: black;
+}
+/*Now Playing*/
+.now_playing{
+	background-color: #171715;
+}
+/*-------------------------------------------------------Footer-------------------------------------------------------*/
+
 /*-------------------------------------------------------VFX----------------------------------------------------------*/
 /*Hacked (https://codepen.io/Hyperplexed/pen/rNrJgrd)*/
 /*SEE HACKED.JS*/
@@ -162,7 +188,7 @@ Name/Greeting:
 		transform:rotate(360deg);
 	}
 }
-/*Gooey marquee (https://codepen.io/amit_sheen/pen/wvORNYm)*/
+/*Gooey marquee [Modified heavily](https://codepen.io/amit_sheen/pen/wvORNYm)*/
 .marquee_text{
 	position: absolute;
 	min-width: 100%;
@@ -171,7 +197,7 @@ Name/Greeting:
 }
 @keyframes marquee{
 	0%, 25% {translate: 100%;}
-	25%, 50% {translate: 10%;}
+	25%, 50% {translate: 8%;}
 	50%, 75% {pause: strong;}
 	75%, 100% {translate: -100%;}
 }
