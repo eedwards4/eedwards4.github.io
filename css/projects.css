@@ -211,7 +211,7 @@ button:hover > ul, button ul:hover{
 	display: flex;
 	justify-content: center;
 }
-.imgLink{
+.ImgLink{
 	width: 32px;
 	height: 32px;
 	margin-left: 15px;
