@@ -45,111 +45,80 @@
 	</section>
 	<section id="portfolio" class="portfolio">
 		<div class="portInner">
-			<div class="portHead">
-				PORTFOLIO
-			</div>
+			<div class="portHead">PORTFOLIO</div>
 			<div class="portBody">
-				<div id="project-track" data-mouse-down-at="0" data-prev-percentage="0">
-					<div class="project">
-						<div class="project-internal">
-							<h1 class="project-internal-header">TRAVERSE</h1>
-							<div class="project-image-container">
-								<img draggable="false" class="project-image" src="images/Traverse.png" alt="Temporary image">
-							</div>
-							<div class="project-link-box">
-								<button class="imgLink" onclick="window.location.href='https://www.youtube.com/watch?v=H8aALZR2UgY'">
-									<img class="linkImg" src="images/youtube.png" alt="Youtube">
-								</button>
-								<button class="imgLink" onclick="window.location.href='https://github.com/eedwards4/CS370-FinalProject'">
-									<img class="linkImg" src="images/github.png" alt="Github">
-								</button>
-								<button class="imgLink" onclick="window.location.href=''">
-									<img class="linkImg" src="images/image.png" alt="Gallery">
-								</button>
-							</div>
-							<div class="project-text">
-								<h2 style="text-align: center">A VIDEOGAME CREATED FOR CS370 AT SSU</h2>
-								<div class="project-text-internal">
-									<h3 style="text-align: center"><i>IT IS THE DISTANT POST APOCOLYPTIC FUTURE OF 2011. HUMANITY IS DEAD. AND YET SOMEHOW ONE MAN SURVIVES. HIS GOAL? FIGURE OUT WHAT THE HECK IS GOING ON. HE MUST TRAVERSE THE WARPED LANDSCAPE, SURVIVE ENEMIES, AND DESTROY THE ULTIMATE ENEMY: THE AGENT.</i></h3>
-									<h4 style="text-align: center">THE TEAM</h4>
-									<ul style="font-family: 'Proxima Soft Light', serif; color: #D5D0D3;">
-										<li style="font-family: 'Proxima Soft Light', serif; color: #D5D0D3;">Seth Nuzum: Progamming, Soundtrack, FX</li>
-										<li style="font-family: 'Proxima Soft Light', serif; color: #D5D0D3;">Adam Erskine: Final Boss, Soundtrack</li>
-										<li style="font-family: 'Proxima Soft Light', serif; color: #D5D0D3;">Richard Yocke: Enemy Design/Programming, Character Design/Programming</li>
-										<li style="font-family: 'Proxima Soft Light', serif; color: #D5D0D3;">Ethan Edwards: Level design, Asset Design, Progamming</li>
-									</ul>
-									<h4 style="text-align: center">PERSONAL NOTES</h4>
-									This was a super fun project to do, we had a 4-week time limit to create the best game we could,
-									and I think we delivered. While basic, Traverse is a fun little side-scroller with some of the
-									elements seen in production titles like <i>Hollow Knight</i> and the <i>Super Mario</i> series.
-									<div><!--WoW a spacer div!--></div>
-								</div>
-							</div>
+				<ul class="slider">
+					<li class="item" style="
+					background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/Traverse.jpg') no-repeat center top;
+					background-size: cover;
+					.active{ background-size: contain; }
+					">
+						<div class="content">
+							<h2 class="title">
+								Traverse
+							</h2>
+							<p class="description">
+								This was my final project for CS370, and was one of the first projects I worked on with
+								a team. Making a game was a fun experience, but having multiple people working on the same
+								repo was a bigger challenge than I was expecting. If I had to pick a single thing that I
+								learned from Traverse, it would probably be how to effectively work with a team.
+							</p>
+							<button onclick="window.location.href='https://github.com/eedwards4/CS370-FinalProject'">Check it out on Github!</button>
 						</div>
-					</div>
-					<div class="project">
-						<div class="project-internal">
-							<h1 class="project-internal-header">PERCEPTRON</h1>
-							<div class="project-image-container">
-								<img draggable="false" class="project-image" src="images/ComputerBrain.png" alt="Temporary image">
-							</div>
-							<div class="project-link-box">
-								<button class="imgLink" onclick="window.location.href='https://youtube.com'">
-									<img class="linkImg" src="images/youtube.png" alt="Youtube">
-								</button>
-								<button class="imgLink" onclick="window.location.href='https://github.com/'">
-									<img class="linkImg" src="images/github.png" alt="Github">
-								</button>
-								<button class="imgLink" onclick="window.location.href='https://ethanedwards.me'">
-									<img class="linkImg" src="images/image.png" alt="Gallery">
-								</button>
-							</div>
-							<div class="project-text">
-								<h2 style="text-align: center">MY CURRENT SUMMER PROJECT</h2>
-								<div class="project-text-internal">
-									<h3 style="text-align: center"><i>A combination of a large laungage model and computer vision, Perceptron can ride shotgun as a user interacts with the real world and give them real time information on what they see.</i></h3>
-									<h4 style="text-align: center">PERSONAL NOTES</h4>
-									I plan to use <a style="color: #D5D0D3;" href="https://brilliant.xyz/"><i>Monocle</i></a>,
-									OpenCV, and a system of interlinked LLMs to create a companion, kind of like Apple's Siri
-									but with the ability to see what you can see. This project is currently in it's very early
-									stages so there isn't much more information than that for now.
-								</div>
-							</div>
+					</li>
+					<li class="item" style="
+					background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url('images/wildfire.jpg') no-repeat center top;
+					background-size: cover;
+					.active{ background-size: contain; }
+					">
+						<div class="content">
+							<h2 class="title">
+								Wildfire Smoke Detection
+							</h2>
+							<p class="description">
+								This is a project I am currently working on for CS470 at SSU. We are attempting to use image recognition
+								to detect smoke from wildfires in forests (as opposed to clouds, campfires, etc).
+							</p>
+							<button onclick="window.location.href='https://github.com/eedwards4/smokeDetection'">Check it out on Github!</button>
 						</div>
-					</div>
-					<div class="project">
-						<div class="project-internal">
-							<h1 class="project-internal-header">CLUTTER BROWSER</h1>
-							<div class="project-image-container">
-								<img draggable="false" class="project-image" src="images/Browser.png" alt="Temporary image">
-							</div>
-							<div class="project-link-box">
-								<button class="imgLink" onclick="window.location.href='https://youtube.com'">
-									<img class="linkImg" src="images/youtube.png" alt="Youtube">
-								</button>
-								<button class="imgLink" onclick="window.location.href='https://github.com/'">
-									<img class="linkImg" src="images/github.png" alt="Github">
-								</button>
-								<button class="imgLink" onclick="window.location.href='https://ethanedwards.me'">
-									<img class="linkImg" src="images/image.png" alt="Gallery">
-								</button>
-							</div>
-							<div class="project-text">
-								<div class="project-text">
-									<h2 style="text-align: center">SHOULD BE NAMED NO-CLUTTER BROWSER</h2>
-									<div class="project-text-internal">
-										<h3 style="text-align: center"><i>A browser that lets the user have a functionally infinite amount of tabs open at once. Yeah this is gonna be a rough one.</i></h3>
-										<h4 style="text-align: center">PERSONAL NOTES</h4>
-										This is my backup summer project in the event that something stops me from creating
-										Perceptron. Super sparse on the details but I can say that I've grown a bit annoyed
-										with the tab limitations of modern browsers like firefox and chrome. Creating a browser
-										like Clutter is a necessity if I want to continue my tab-hoarding tendencies.
-									</div>
-								</div>
-							</div>
+					</li>
+					<li class="item" style="
+					background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/c.jpg') no-repeat center top;
+					background-size: cover;
+					.active{ background-size: contain; }
+					">
+						<div class="content">
+							<h2 class="title">
+								C Compiler
+							</h2>
+							<p class="description">
+								This is a project I am currently working on for CS460 at SSU. We are currently building an
+								interpreter for the C language, but after the project is completed I will be converting the
+								existing code into a full-fledged compiler. This is a bit of a daunting project, but I'm
+								confident that I can make it work!
+							</p>
+							<button onclick="window.location.href='https://github.com/eedwards4/CPlane'">Check it out on Github!</button>
 						</div>
-					</div>
-				</div>
+					</li>
+
+					<li class="item" style="background-image: url('https://images7.alphacoders.com/878/878663.jpg')">
+						<div class="content">
+							<h2 class="title">
+								Personal Assistant
+							</h2>
+							<p class="description">
+								This is a newer project, but one that really has me excited. The plan
+								is to design a personal assistant with similar functionality to one of the commercial ones
+								(google/amazon), but open source. This project is in a bit of a limbo state as
+								I have been too busy to work on it, but I hope to get back to it soon.
+							</p>
+						</div>
+					</li>
+				</ul>
+				<nav class="nav2">
+					<ion-icon class="btn prev" name="arrow-back"></ion-icon>
+					<ion-icon class="btn next" name="arrow-forward"></ion-icon>
+				</nav>
 			</div>
 		</div>
 	</section>
@@ -160,13 +129,26 @@
 			</div>
 		</div>
 	</section>
+	<!--
 	<section id="about" class="about">
-
+		<div class="aboutInner">
+			<div class="aboutHead">ABOUT ME</div>
+			<div class="aboutBody">
+				<ul>
+					<li>Education</li>
+					<li>Hobbies</li>
+					<li>Skills</li>
+				</ul>
+			</div>
+		</div>
 	</section>
 	<section id="nowPlaying" class="now_playing">
 
 	</section>
-	<script src="js/project_slide.js"></script>
+	-->
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 	<script src="js/hacked.js"></script>
+	<script src="js/project_slide.js"></script>
 </body>
 </html>

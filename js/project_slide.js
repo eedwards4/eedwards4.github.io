@@ -1,44 +1,28 @@
-const track = document.getElementById("project-track");
+const slider = document.querySelector('.slider');
 
-const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
+const images = [
+    'images/Traverse.jpg',
+    'images/wildfire.jpg',
+    'images/c.jpg',
+    'images/computerBrain.png'
+]
 
-const handleOnUp = () => {
-  track.dataset.mouseDownAt = "0";  
-  track.dataset.prevPercentage = track.dataset.percentage;
+function rotateImages() {
+    images.prepend(images.pop());
 }
 
-const handleOnMove = e => {
-  if(track.dataset.mouseDownAt === "0") return;
-  
-  const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX, maxDelta = window.innerWidth / 2;
-  
-  const percentage = (mouseDelta / maxDelta) * - 100,
-        nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
-        nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), - 100);
-  
-  track.dataset.percentage = nextPercentage;
-  
-  track.animate({
-    transform: `translate(${nextPercentage}%, 0%)`
-  }, { duration: 1200, fill: "forwards" });
-	
-  for(const project of track.getElementsByClassName("project")) {
-	  project.animate({
-		objectPosition: `${100 + nextPercentage}% center`
-	  });
-  }
+function activate(e) {
+    const items = document.querySelectorAll('.item');
+    const oldActive = slider.querySelector('.item');
+
+    e.target.matches('.next') && slider.append(items[0]);
+    e.target.matches('.prev') && slider.prepend(items[items.length-1]);
+
+    rotateImages();
+
+    const newActive = slider.querySelector('.item');
+    newActive.style.background = '';
+    oldActive.style.background = '';
 }
 
-/* -- Had to add extra lines for touch events -- */
-
-window.onmousedown = e => handleOnDown(e);
-
-window.ontouchstart = e => handleOnDown(e.touches[0]);
-
-window.onmouseup = e => handleOnUp(e);
-
-window.ontouchend = e => handleOnUp(e.touches[0]);
-
-window.onmousemove = e => handleOnMove(e);
-
-window.ontouchmove = e => handleOnMove(e.touches[0]);
+document.addEventListener('click',activate,false);

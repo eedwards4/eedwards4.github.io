@@ -27,7 +27,7 @@ Name/Greeting:
 	position: sticky;
 	top: 0;
 	left: 0;
-	z-index: 1;
+	z-index: 2;
 	padding: 1.5rem;
 	display:flex;
 	justify-content: center;
@@ -146,6 +146,7 @@ Name/Greeting:
 	display: grid;
 	place-items: center;
 }
+
 /*Portfolio*/
 .portfolio{
 	width: 100%;
@@ -156,8 +157,8 @@ Name/Greeting:
 .portInner{
 	background-color: #171715;
 	width: min(1000px, 100%);
-	border-top-left-radius: 3rem;
-	border-top-right-radius: 3rem;
+	border-top-left-radius: 2rem;
+	border-top-right-radius: 2rem;
 }
 
 .portHead{
@@ -172,107 +173,150 @@ Name/Greeting:
 
 .portBody{
 	width: 100%;
-	background-color: #7A8286;
+	background-color: #171715;
 	height: 70vh;
-	overflow-x: hidden;
+	overflow-x: scroll;
 	overflow-y: hidden;
 	position: relative;
 }
-
-#project-track{
-	margin-top: 10px;
-	margin-bottom: 10px;
-	display: flex;
-	gap: 4vmin;
+/*Carousel*/
+/*Code from: https://codepen.io/noirsociety/pen/ZEwLGXB*/
+.item {
+	width: 200px;
+	height: 300px;
+	list-style-type: none;
 	position: absolute;
-	width: 100%;
-	height: 100%;
-	user-select: none;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 1;
+	background-position: center;
+	background-size: cover;
+	border-radius: 20px;
+	box-shadow: 0 20px 30px rgba(255,255,255,0.3) inset;
+	transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
+
+	&:nth-child(1), &:nth-child(2) {
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		transform: none;
+		border-radius: 0;
+		box-shadow: none;
+		opacity: 1;
+	}
+
+	&:nth-child(3) { left: 50%; }
+	&:nth-child(4) { left: calc(50% + 220px); }
+	&:nth-child(5) { left: calc(50% + 440px); }
+	&:nth-child(6) { left: calc(50% + 660px); opacity: 0; }
 }
-/*Project boxes*/
-#project-track > .project {
-	width: 100%;
-	min-width: 100%;
-	height: 98%;
-	object-fit: cover;
-	background-color: rgba(76, 76, 76, 0.36);
-	backdrop-filter: blur(4px);
-	box-shadow: inset 0 0 0 1000px rgba(255,255,255,0.05);
-}
-.project-internal{
-	width: calc(100% - 20px);
-	height: calc(100% - 30px);
-	margin-left: 10px;
-	margin-top: 10px;
-	font-family: "Proxima Soft Light", serif;
-	color: #D5D0D3;
-	overflow-y: hidden;
-	overflow-x: hidden;
-	-ms-overflow-style: none;
-	scrollbar-width: none;
-}
-.project-internal::-webkit-scrollbar {
+
+.content {
+	width: min(30vw,400px);
+	position: absolute;
+	top: 50%;
+	left: 3rem;
+	transform: translateY(-50%);
+	font: 400 0.85rem helvetica,sans-serif;
+	color: white;
+	text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+	opacity: 0;
 	display: none;
+
+	& .title {
+		font-family: 'arial-black';
+		text-transform: uppercase;
+	}
+
+	& .description {
+		line-height: 1.7;
+		margin: 1rem 0 1.5rem;
+		font-size: 0.8rem;
+	}
+
+	& button {
+		width: fit-content;
+		background-color: rgba(0,0,0,0.1);
+		color: white;
+		border: 2px solid white;
+		border-radius: 0.25rem;
+		padding: 0.75rem;
+		cursor: pointer;
+	}
 }
-.project-internal-header{
-	width: 100%;
-	text-align: center;
+
+.item:nth-of-type(2) .content {
+	display: block;
+	animation: show 0.75s ease-in-out 0.3s forwards;
 }
-/*Project showcase image*/
-.project-image-container{
-	width: 100%;
-	max-height: 75%;
-	overflow: hidden;
+
+@keyframes show {
+	0% {
+		filter: blur(5px);
+		transform: translateY(calc(-50% + 75px));
+	}
+	100% {
+		opacity: 1;
+		filter: blur(0);
+	}
 }
-.project-image{
-	width: 75%;
-	margin-left: calc(25%/2);
-	opacity: 95%;
+
+.nav2 {
+	position: absolute;
+	bottom: 2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 5;
+	user-select: none;
+
+	& .btn {
+		background-color: rgba(255,255,255,0.5);
+		color: rgba(0,0,0,0.7);
+		border: 2px solid rgba(0,0,0,0.6);
+		margin: 0 0.25rem;
+		padding: 0.75rem;
+		border-radius: 50%;
+		cursor: pointer;
+
+		&:hover {
+			background-color: rgba(255,255,255,0.3);
+		}
+	}
 }
-/*Project links*/
-.project-link-box{
-	width: 100%;
-	height: 50px;
-	display: flex;
-	justify-content: center;
+
+@media (width > 650px) and (width < 900px) {
+	.content {
+		& .title        { font-size: 1rem; }
+		& .description  { font-size: 0.7rem; }
+		& button        { font-size: 0.7rem; }
+	}
+	.item {
+		width: 160px;
+		height: 270px;
+
+		&:nth-child(3) { left: 50%; }
+		&:nth-child(4) { left: calc(50% + 170px); }
+		&:nth-child(5) { left: calc(50% + 340px); }
+		&:nth-child(6) { left: calc(50% + 510px); opacity: 0; }
+	}
 }
-.imgLink{
-	width: 32px;
-	height: 32px;
-	margin-left: 15px;
-	margin-top: 16px;
-	display: inline-flex;
-	border: none;
-	background: transparent;
-}
-.linkImg{
-	width: 32px;
-	height: 32px;
-	margin-top: -1px;
-	margin-left: -5px;
-	filter: invert(65%) sepia(0%) saturate(7463%) hue-rotate(222deg) brightness(119%) contrast(115%);
-}
-/*Project description text*/
-.project-text{
-	width: 100%;
-	float: left;
-	display: inline-block;
-}
-.project-text-internal{
-	width: 75%;
-	margin-left: calc(25%/2);
-	font-family: "Proxima Soft Light", serif;
-	color: #D5D0D3;
-}
-.project-header {
-	width: 100%;
-	height: 35px;
-	font-family: "Proxima Soft Light", serif;
-	font-size: 50px;
-	color: #D5D0D3;
-	text-align: center;
-	margin-top: 0;
-	margin-bottom: 10px;
+
+@media (width < 650px) {
+	.content {
+		& .title        { font-size: 0.9rem; }
+		& .description  { font-size: 0.65rem; }
+		& button        { font-size: 0.7rem; }
+	}
+	.item {
+		width: 130px;
+		height: 220px;
+
+		&:nth-child(3) { left: 50%; }
+		&:nth-child(4) { left: calc(50% + 140px); }
+		&:nth-child(5) { left: calc(50% + 280px); }
+		&:nth-child(6) { left: calc(50% + 420px); opacity: 0; }
+	}
 }
 
 /*Connect with me button*/
@@ -287,10 +331,11 @@ Name/Greeting:
 	background-color: #171715;
 	padding-top: 25px;
 	padding-bottom: 25px;
-	border-bottom-left-radius: 3rem;
-	border-bottom-right-radius: 3rem;
+	border-bottom-left-radius: 2rem;
+	border-bottom-right-radius: 2rem;
 	display: grid;
 	place-items: center;
+	z-index: 1;
 }
 
 .connectText{
@@ -319,7 +364,34 @@ Name/Greeting:
 /*About*/
 .about{
 	background-color: black;
+	display: grid;
+	place-items: center;
 }
+
+.aboutInner{
+	width: min(1000px, 100%);
+	margin-top: -50px;
+	background-color: #0D0D0C;
+	z-index: 0;
+}
+
+.aboutHead{
+	width: 100%;
+	margin-top: 50px;
+	padding-top: 50px;
+	padding-bottom: 25px;
+	text-align: center;
+	font-size: min(50px, 5vw);
+	font-family: input-mono, monospace;
+	color: #9c9c9c;
+}
+
+.aboutBody{
+	width: 100%;
+	height: 70vh;
+	position: relative;
+}
+
 /*Now Playing*/
 .now_playing{
 	background-color: #171715;
