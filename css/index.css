@@ -130,14 +130,7 @@ Name/Greeting:
 	display: grid;
 	place-items: center;
 	background-color: black;
-	background-image:
-		linear-gradient(to right, white, 1rem, transparent 50%),
-      	linear-gradient(to left, white, 1rem, transparent 50%);
 	filter: contrast(15);
-
-	p{
-		filter: blur(0.07em);
-	}
 }
 
 .marquee_clear{
