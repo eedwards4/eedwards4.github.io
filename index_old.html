@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ethan Edwards</title>
+	<link rel="icon" type="image/x-icon" href="images/EE_logo_2.png">
+	<link href="css/index.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://use.typekit.net/eod8nyz.css">
+</head>
+<body>
+	<div class="header">
+		<div class="nav">
+			<ul class="nav_ul">
+				<li class="textItem"><a href="#home">ETHAN EDWARDS</a></li>
+				<li class="textItem"><a href="#portfolio">PORTFOLIO</a></li>
+				<li class="textItem"><a href="#about">ABOUT</a></li>
+				<li><div class="links">
+						<button class="headerImgLink" onclick="window.location.href='https://www.linkedin.com/in/ethan-edwards-b6a6b024b/'">
+							<img class="headerLinkImg" src="images/linkedin.png" alt="Linkedin">
+						</button>
+						<button class="headerImgLink" onclick="window.location.href='https://github.com/eedwards4'">
+							<img class="headerLinkImg" src="images/github.png" alt="Git">
+						</button>
+						<button class="headerImgLink" onclick="window.location.href='https://youtube.com'">
+							<img class="headerLinkImg" src="images/youtube.png" alt="Youtube">
+						</button>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<section id="home" class="home">
+		<div class="marquee_outer">
+			<div class="marquee">
+				<div class="marquee_blur" aria-hidden="true">
+					<p class="marquee_text">ETHAN EDWARDS</p>
+				</div>
+				<div class="marquee_clear">
+					<p class="marquee_text">ETHAN EDWARDS</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="portfolio" class="portfolio">
+		<div class="portInner">
+			<div class="portHead">PORTFOLIO</div>
+			<div class="portBody">
+				<ul class="slider">
+					<li class="item" style="
+					background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/Traverse.jpg') no-repeat center top;
+					background-size: cover;
+					.active{ background-size: contain; }
+					">
+						<div class="content">
+							<h2 class="title">
+								Traverse
+							</h2>
+							<p class="description">
+								This was my final project for CS370, and was one of the first projects I worked on with
+								a team. Making a game was a fun experience, but having multiple people working on the same
+								repo was a bigger challenge than I was expecting. If I had to pick a single thing that I
+								learned from Traverse, it would probably be how to effectively work with a team.
+							</p>
+							<button onclick="window.location.href='https://github.com/eedwards4/CS370-FinalProject'">Check it out on Github!</button>
+						</div>
+					</li>
+					<li class="item" style="
+					background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url('images/wildfire.jpg') no-repeat center top;
+					background-size: cover;
+					.active{ background-size: contain; }
+					">
+						<div class="content">
+							<h2 class="title">
+								Wildfire Smoke Detection
+							</h2>
+							<p class="description">
+								This is a project I am currently working on for CS470 at SSU. We are attempting to use image recognition
+								to detect smoke from wildfires in forests (as opposed to clouds, campfires, etc).
+							</p>
+							<button onclick="window.location.href='https://github.com/eedwards4/smokeDetection'">Check it out on Github!</button>
+						</div>
+					</li>
+					<li class="item" style="
+					background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/c.jpg') no-repeat center top;
+					background-size: cover;
+					.active{ background-size: contain; }
+					">
+						<div class="content">
+							<h2 class="title">
+								C Compiler
+							</h2>
+							<p class="description">
+								This is a project I am currently working on for CS460 at SSU. We are currently building an
+								interpreter for the C language, but after the project is completed I will be converting the
+								existing code into a full-fledged compiler. This is a bit of a daunting project, but I'm
+								confident that I can make it work!
+							</p>
+							<button onclick="window.location.href='https://github.com/eedwards4/CPlane'">Check it out on Github!</button>
+						</div>
+					</li>
+
+					<li class="item" style="background-image: url('https://images7.alphacoders.com/878/878663.jpg')">
+						<div class="content">
+							<h2 class="title">
+								Personal Assistant
+							</h2>
+							<p class="description">
+								This is a newer project, but one that really has me excited. The plan
+								is to design a personal assistant with similar functionality to one of the commercial ones
+								(google/amazon), but open source. This project is in a bit of a limbo state as
+								I have been too busy to work on it, but I hope to get back to it soon.
+							</p>
+						</div>
+					</li>
+				</ul>
+				<nav class="nav2">
+					<ion-icon class="btn prev" name="arrow-back"></ion-icon>
+					<ion-icon class="btn next" name="arrow-forward"></ion-icon>
+				</nav>
+			</div>
+		</div>
+	</section>
+	<section id="connect">
+		<div class="connect">
+			<div class="connectInner">
+				<a id="hack" class="connectText" data-value="CONNECT WITH ME!" href='https://www.linkedin.com/in/ethan-edwards-b6a6b024b/'>CONNECT WITH ME!</a>
+			</div>
+		</div>
+	</section>
+	<!--
+	<section id="about" class="about">
+		<div class="aboutInner">
+			<div class="aboutHead">ABOUT ME</div>
+			<div class="aboutBody">
+				<ul>
+					<li>Education</li>
+					<li>Hobbies</li>
+					<li>Skills</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section id="nowPlaying" class="now_playing">
+
+	</section>
+	-->
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	<script src="js/browser_detect.js"></script>
+	<script src="js/hacked.js"></script>
+	<script src="js/project_slide.js"></script>
+</body>
+</html>
